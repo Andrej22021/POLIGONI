@@ -10,6 +10,7 @@ namespace POLIGONI
     {
         static void Main(string[] args)
         {
+            //Pivalica Andrej
         }
     }
 }
