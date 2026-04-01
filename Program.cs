@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POLIGONI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,16 @@ namespace POLIGONI
     {
         static void Main(string[] args)
         {
-            //Pivalica Andrej
+            //Andrej Pivalica
+            
+            tacka A = new tacka(1, 1);
+            tacka B = new tacka(5, 1);
+            tacka C = new tacka(2, 6);
+            tacka D = new tacka(2, 0);
+            vektor AB = new vektor(A, B);
+            vektor CD = new vektor(C, D);
+            Console.WriteLine(AB.sece(CD));
+
         }
     }
 }

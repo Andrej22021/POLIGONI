@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POLIGONI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,31 @@ namespace POLIGONI
         {
             pocetak = a;
             kraj = b;
+        }
+        public static double SP(vektor a, vektor b)
+        {
+            tacka A = a.centriraj();
+            tacka B = b.centriraj();
+            return A.x * B.x + A.y * B.y;
+        }
+        public static double VP(vektor a, vektor b)
+        {
+            tacka A = a.centriraj();
+            tacka B = b.centriraj();
+            double k = A.x * B.y - A.y * B.x;
+            return k;
+        }
+        public double duzina()
+        {
+            tacka druga = this.centriraj();
+            return druga.d();
+        }
+        public bool sece(vektor b)
+        {
+            int x = ravan.SIS(this, b.pocetak, b.kraj);
+            int y = ravan.SIS(b, this.pocetak, this.kraj);
+            if ((x != 1) && (y != 1)) return true;
+            else return false;
         }
     }
 }

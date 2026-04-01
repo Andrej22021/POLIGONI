@@ -5,6 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POLIGONI", "POLIGONI.csproj", "{3987CA4F-143C-4F6B-8ECC-31B932901F46}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B052FAC1-AE72-40BB-A9FA-3DC04BF1A084}"
+	ProjectSection(SolutionItems) = preProject
+		ravan.cs = ravan.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

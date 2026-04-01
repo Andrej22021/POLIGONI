@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POLIGONI;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,26 +8,28 @@ using System.Threading.Tasks;
 
 namespace POLIGONI
 {
-    internal class poligon
+    internal class Poligon
     {
         int br_temena;
         tacka[] teme;
-        public poligon(int n)
+        public Poligon(int n)
         {
             br_temena = n;
             teme = new tacka[n];
         }
-        public static poligon unos()
+        public static Poligon unos()
         {
             Console.WriteLine("Unesite broj temena=");
             int br = Convert.ToInt32(Console.ReadLine());
-            poligon novi = new poligon(br);
+            Poligon novi = new Poligon(br);
             for (int i = 0; i < br; i++)
             {
-                Console.Write("Teme({0}).x=", i + 1);
+                Console.WriteLine("Teme({0}).x", i + 1);
                 double x = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Teme({0}).y=", i + 1);
+
+                Console.WriteLine("Teme({0}).y", i + 1);
                 double y = Convert.ToDouble(Console.ReadLine());
+
                 novi.teme[i] = new tacka(x, y);
             }
             return novi;
@@ -50,11 +53,11 @@ namespace POLIGONI
             }
             izlaz.Close();
         }
-        static public poligon ucitaj()
+        static public Poligon ucitaj()
         {
             StreamReader ulaz = new StreamReader("poligon.txt");
             int br = Convert.ToInt32(ulaz.ReadLine());
-            poligon novi = new poligon(br);
+            Poligon novi = new Poligon(br);
             for (int i = 0; i < br; i++)
             {
                 double x = Convert.ToDouble(ulaz.ReadLine());
@@ -63,6 +66,23 @@ namespace POLIGONI
             }
             ulaz.Close();
             return novi;
+        }
+        public double obim()
+        {
+            vektor a;
+            double obim = 0;
+            for (int i = 0; i < br_temena - 1; i++)
+            {
+                a = new vektor(teme[i], teme[i + 1]);
+                obim += a.duzina();
+            }
+            a = new vektor(teme[br_temena - 1], teme[0]);
+            obim += a.duzina();
+            return obim;
+        }
+        public bool prost()
+        {
+            return true;
         }
     }
 }
