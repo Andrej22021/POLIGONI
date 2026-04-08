@@ -12,7 +12,26 @@ namespace POLIGONI
         static void Main(string[] args)
         {
             //Andrej Pivalica
-            
+
+            /*
+           tacka A = new tacka(2, 3);
+           tacka B = new tacka(4, 5);
+           tacka C = new tacka(6, 7);
+           tacka D = new tacka(8, 9);
+           vektor AB = new vektor(A, B);
+           AB.stampaj();
+           */
+            /*
+            Poligon prvi = Poligon.unos();
+            prvi.stampa();
+            prvi.snimi();
+            */
+            /*
+            Poligon drugi = Poligon.ucitaj();
+            drugi.stampa();
+            Console.ReadKey();
+            */
+            /*
             tacka A = new tacka(1, 1);
             tacka B = new tacka(5, 1);
             tacka C = new tacka(2, 6);
@@ -20,6 +39,12 @@ namespace POLIGONI
             vektor AB = new vektor(A, B);
             vektor CD = new vektor(C, D);
             Console.WriteLine(AB.sece(CD));
+            */
+            Poligon prvi = Poligon.unos();
+            Console.WriteLine(prvi.konveksan());
+        }
+    }
+}
 
         }
     }
