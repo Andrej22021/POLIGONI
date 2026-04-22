@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace POLIGONI
 {
+
     internal class tacka
     {
         public double x;
@@ -19,9 +20,9 @@ namespace POLIGONI
             x = a;
             y = b;
         }
-        public static bool iste(tacka a, tacka b)
+        public static bool iste(tacka A, tacka B)
         {
-            if ((a.x == b.x) && (a.y == b.y)) return true;
+            if ((A.x == B.x) && (A.y == B.y)) return true;
             else return false;
         }
     }

@@ -28,27 +28,27 @@ namespace POLIGONI
         }
         public static double SP(vektor a, vektor b)
         {
-            tacka A = a.centriraj();
-            tacka B = b.centriraj();
-            return A.x * B.x + A.y * B.y;
+            tacka aC = a.centriraj();
+            tacka bC = b.centriraj();
+            return aC.x * bC.x + aC.y * bC.y;
         }
         public static double VP(vektor a, vektor b)
         {
-            tacka A = a.centriraj();
-            tacka B = b.centriraj();
-            double k = A.x * B.y - A.y * B.x;
-            return k;
+            tacka aC = a.centriraj();
+            tacka bC = b.centriraj();
+            return aC.x * bC.y - bC.x * aC.y;
         }
         public double duzina()
         {
-            tacka druga = this.centriraj();
-            return druga.d();
+            tacka A = this.centriraj();
+            double duzina = A.d();
+            return duzina;
         }
         public bool sece(vektor b)
         {
             int x = ravan.SIS(this, b.pocetak, b.kraj);
             int y = ravan.SIS(b, this.pocetak, this.kraj);
-            if ((x != 1) && (y != 1)) return true;
+            if (x * y != 0) return true;
             else return false;
         }
     }
